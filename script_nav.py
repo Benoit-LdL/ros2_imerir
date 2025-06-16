@@ -17,15 +17,15 @@ class GoToNode(Node):
         while not self.action_client.wait_for_server(timeout_sec=1.0):
             self.get_logger().info('Waiting for the navigate_to_pose action server...')
 
-    def send_goal(self):
+    def send_goal(self, posToGo):
         goal_pose = PoseStamped()
         goal_pose.header.frame_id = 'map'
-        goal_pose.pose.position.x = 1.0
-        goal_pose.pose.position.y = 1.0
+        goal_pose.pose.position.x = posToGo[0]
+        goal_pose.pose.position.y = posToGo[1]
         goal_pose.pose.position.z = 0.0
         goal_pose.pose.orientation.x = 0.0
         goal_pose.pose.orientation.y = 0.0
-        goal_pose.pose.orientation.z = 0.0
+        goal_pose.pose.orientation.z = posToGo[2]
         goal_pose.pose.orientation.w = 1.0
 
         goal_msg = NavigateToPose.Goal()
@@ -49,10 +49,13 @@ class GoToNode(Node):
         result = future.result().result
         self.get_logger().info('Result: ' + str(result))
 
+positionsToGo = [[4.578,-0.481,-1.593], [1.547,1.097,-1.606], [-0.121,-0.067,-1.558], [-0.260,3.001,-1.576], [2.335,2.893,-1.584], [5.007,1.752,-1.569]]
+
 def main():
     rclpy.init()
     node = GoToNode()
-    node.send_goal()
-    rclpy.spin(node)
+    for pos in positionsToGo :
+        node.send_goal(pos)
+        rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
