@@ -1,0 +1,28 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ldl-ecole/ros2_ws/install/turtlesim/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros2_ws/install/ros2_imerir/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros2_ws/install/imerir_nav/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/build/turtlebot3_teleop",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_teleop/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/build/turtlebot3_example",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_example/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_msgs/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/dynamixel_sdk/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ldl-ecole/ros2_ws/install/turtlesim/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros2_ws/install/ros2_imerir/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros2_ws/install/imerir_nav/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/build/turtlebot3_teleop",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_teleop/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/build/turtlebot3_example",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_example/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/turtlebot3_msgs/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages",
+        "/home/ldl-ecole/ros_workshop_ws/install/dynamixel_sdk/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

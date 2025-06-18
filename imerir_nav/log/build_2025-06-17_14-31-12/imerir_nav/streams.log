@@ -1,0 +1,38 @@
+[1.675s] Invoking command in '/home/ldl-ecole/ros2_ws/src/imerir_nav': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/imerir_nav build --build-base /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build install --record /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/install.log --single-version-externally-managed install_data
+[2.214s] running egg_info
+[2.215s] creating build/imerir_nav/imerir_nav.egg-info
+[2.255s] writing build/imerir_nav/imerir_nav.egg-info/PKG-INFO
+[2.255s] writing dependency_links to build/imerir_nav/imerir_nav.egg-info/dependency_links.txt
+[2.255s] writing entry points to build/imerir_nav/imerir_nav.egg-info/entry_points.txt
+[2.256s] writing requirements to build/imerir_nav/imerir_nav.egg-info/requires.txt
+[2.256s] writing top-level names to build/imerir_nav/imerir_nav.egg-info/top_level.txt
+[2.256s] writing manifest file 'build/imerir_nav/imerir_nav.egg-info/SOURCES.txt'
+[2.339s] reading manifest file 'build/imerir_nav/imerir_nav.egg-info/SOURCES.txt'
+[2.339s] adding license file 'LICENSE'
+[2.340s] writing manifest file 'build/imerir_nav/imerir_nav.egg-info/SOURCES.txt'
+[2.340s] running build
+[2.340s] running build_py
+[2.340s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build
+[2.341s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib
+[2.341s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib/imerir_nav
+[2.341s] copying imerir_nav/nav_node.py -> /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib/imerir_nav
+[2.348s] copying imerir_nav/__init__.py -> /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib/imerir_nav
+[2.349s] running install
+[2.361s] running install_lib
+[2.404s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav
+[2.404s] copying /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib/imerir_nav/nav_node.py -> /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav
+[2.404s] copying /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build/lib/imerir_nav/__init__.py -> /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav
+[2.405s] byte-compiling /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav/nav_node.py to nav_node.cpython-312.pyc
+[2.406s] byte-compiling /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav/__init__.py to __init__.cpython-312.pyc
+[2.406s] running install_data
+[2.406s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/share/ament_index
+[2.406s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/share/ament_index/resource_index
+[2.407s] creating /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/share/ament_index/resource_index/packages
+[2.407s] copying resource/imerir_nav -> /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/share/ament_index/resource_index/packages
+[2.407s] copying package.xml -> /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/share/imerir_nav
+[2.407s] running install_egg_info
+[2.451s] Copying build/imerir_nav/imerir_nav.egg-info to /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages/imerir_nav-0.0.0-py3.12.egg-info
+[2.453s] running install_scripts
+[2.730s] Installing nav_node script to /home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/imerir_nav
+[2.730s] writing list of installed files to '/home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/install.log'
+[2.788s] Invoked command in '/home/ldl-ecole/ros2_ws/src/imerir_nav' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ldl-ecole/ros2_ws/src/imerir_nav/install/imerir_nav/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/imerir_nav build --build-base /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/build install --record /home/ldl-ecole/ros2_ws/src/imerir_nav/build/imerir_nav/install.log --single-version-externally-managed install_data
