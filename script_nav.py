@@ -9,7 +9,9 @@ from nav2_msgs.action import NavigateToPose
 from geometry_msgs.msg import PoseStamped
 from rclpy.action import ActionClient
 
+from pkg_resources import load_entry_point
 
+load_entry_point()
 class GoToNode(Node):
     def __init__(self):
         super().__init__('go_to_node')
@@ -49,12 +51,12 @@ class GoToNode(Node):
         result = future.result().result
         self.get_logger().info('Result: ' + str(result))
 
-positionsToGo = [[1.11,-0.272,0.0],     # pos 1
-                 [0.261,3.22,0.0],      # pos 2
-                 [-1.59,3.76,0.0],      # pos 3
-                 [0.544,5.71,0.0],      # pos 4
-                 [2.18,3.6,0.0],        # pos 5
-                 [3.02,1.3,0.0]]        # pos 6
+positionsToGo = [[-4.22, -0.869, 0.00],     # pos 1
+                 [-4.22, 4.57, 0.0],        # pos 2
+                 [-0.594, 2.87, 0.0],       # pos 3
+                 [2.83, 2.23, 0.0],         # pos 4
+                 [6.87, 3.09, 0.0],         # pos 5
+                 [8.72, -4.12, 0.0]]        # pos 6
 
 def main():
     rclpy.init()
