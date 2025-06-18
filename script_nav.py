@@ -49,12 +49,12 @@ class GoToNode(Node):
         result = future.result().result
         self.get_logger().info('Result: ' + str(result))
 
-positionsToGo = [[4.578,-0.481,-1.593],     # pos 1
-                 [1.547,1.097,-1.606],      # pos 2
-                 [-0.121,-0.067,-1.558],    # pos 3
-                 [-0.260,3.001,-1.576],     # pos 4
-                 [2.335,2.893,-1.584],      # pos 5
-                 [5.007,1.752,-1.569]]      # pos 6
+positionsToGo = [[1.11,-0.272,0.0],     # pos 1
+                 [0.261,3.22,0.0],      # pos 2
+                 [-1.59,3.76,0.0],      # pos 3
+                 [0.544,5.71,0.0],      # pos 4
+                 [2.18,3.6,0.0],        # pos 5
+                 [3.02,1.3,0.0]]        # pos 6
 
 def main():
     rclpy.init()
