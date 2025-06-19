@@ -44,9 +44,11 @@ int main(int argc, char * argv[])
   };
 
   std::vector<std::array<float, 7>> mov_pos = {
-    {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000},
-    {0.244, -0.000, 0.031, 0.000, 0.356, -0.000, 0.935},
-    {-0.082, -0.155, 0.056, -0.319, -0.180, 0.810, -0.458}
+    {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000},     // origin
+    {0.244, -0.000, 0.031, 0.000, 0.356, -0.000, 0.935},    // first pos
+    {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000},     // origin
+    {-0.082, -0.155, 0.056, -0.319, -0.180, 0.810, -0.458}, // second pos
+    {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000}      // origin
   };
 
   
@@ -58,7 +60,7 @@ int main(int argc, char * argv[])
     RCLCPP_ERROR(logger, "Failed to open the gripper");
   }
   
-  for(int i = 0; i < 4; ++i) {
+  for(int i = 0; i < static_cast<int>(mov_pos.size()); ++i) {
     // Set the target pose for the arm
     move_group_interface.setPoseTarget(target_pose(mov_pos[i]));
 
@@ -91,17 +93,18 @@ int main(int argc, char * argv[])
       }
     }
 
+
+    if(i == static_cast<int>(mov_pos.size())-2) {
+        // Open the gripper
+      gripper_interface.setNamedTarget("open");
+      if (gripper_interface.move()) {
+        RCLCPP_INFO(logger, "Gripper opened successfully");  // Log success
+      } else {
+        RCLCPP_ERROR(logger, "Failed to open the gripper");
+      }
+    }
+
   }
-
-
-  // Open the gripper
-  gripper_interface.setNamedTarget("open");
-  if (gripper_interface.move()) {
-    RCLCPP_INFO(logger, "Gripper opened successfully");  // Log success
-  } else {
-    RCLCPP_ERROR(logger, "Failed to open the gripper");
-  }
-
 
   // Shut down the ROS2 node
   rclcpp::shutdown();

@@ -1,0 +1,11 @@
+--> launch LAUNCH
+ros2 launch imerir_manip complete_setup.launch.py
+
+--> launch GAZEBO:
+ros2 launch open_manipulator_bringup gazebo.launch.py
+
+--> launch RVIZ
+LC_NUMERIC=en_US.UTF-8 ros2 launch open_manipulator_moveit_config moveit_core.launch.py
+
+--> Launch custom node
+ros2 run imerir_manip imerir_manip
