@@ -22,10 +22,14 @@ def main():
     real_width_cm = 37.5
     real_height_cm = 28.3
 
+
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
     # Répertoires
-    webcam_dir = "/home/mattis/ros_workshop_ws/src/vision_Yolo/vision_Yolo/webcam"
-    yolo_dir = "/home/mattis/ros_workshop_ws/src/vision_Yolo/vision_Yolo/yolo"
+    webcam_dir = os.path.join(script_dir, "webcam")
+    yolo_dir = os.path.join(script_dir, "yolo")
     labels_dir = os.path.join(yolo_dir, "labels")
+    train_yolo = os.path.join(yolo_dir, "train", "weights", "best.pt")
 
     os.makedirs(webcam_dir, exist_ok=True)
     os.makedirs(yolo_dir, exist_ok=True)
@@ -57,7 +61,7 @@ def main():
             # YOLO
             yolo_command = [
                 "yolo", "detect", "predict",
-                "model=/home/mattis/ros_workshop_ws/src/vision_Yolo/vision_Yolo/train/weights/best.pt",
+                f"model={train_yolo}",
                 f"source={capture_image_path}",
                 f"project={yolo_dir}",
                 f"name=.",
@@ -80,13 +84,13 @@ def main():
                     os.rename(yolo_pred_img, yolo_image_path)
                     print(f"Image YOLO renommée en : {yolo_image_path}")
                 else:
-                    print("❌ Image YOLO non trouvée :", yolo_pred_img)
+                    print("Image YOLO non trouvée :", yolo_pred_img)
 
                 if os.path.exists(yolo_pred_txt):
                     os.rename(yolo_pred_txt, yolo_txt_path)
                     print(f"Fichier YOLO txt renommé en : {yolo_txt_path}")
                 else:
-                    print("❌ Fichier YOLO txt non trouvé :", yolo_pred_txt)
+                    print("Fichier YOLO txt non trouvé :", yolo_pred_txt)
 
                 # Afficher l'image annotée
                 img_annotated = cv2.imread(yolo_image_path)
@@ -115,9 +119,9 @@ def main():
 
                             print(f"Classe {class_id} : centre = ({x_center_cm:.2f} cm, {y_center_cm:.2f} cm)")
                     else:
-                        print("❌ Label file not found for center calculation.")
+                        print("Label file not found for center calculation.")
                 else:
-                    print("❌ Impossible de lire l'image annotée.")
+                    print("Impossible de lire l'image annotée.")
 
             except subprocess.CalledProcessError as e:
                 print("Erreur YOLO :")
