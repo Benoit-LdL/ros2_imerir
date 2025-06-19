@@ -13,14 +13,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='ldl-ecole',
-    maintainer_email='benoitlagasse@hotmail.com',
-    description='Navigation between multiple positions',
+    maintainer='corentin',
+    maintainer_email='corentin.choisel@imerir.com',
+    description='TODO: Package description',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'nav_node = imerir_nav.nav_node:main'
+            'script_nav = imerir_nav.script_nav:main',
+            'script_prof = imerir_nav.script_prof:main'
         ],
     },
 )

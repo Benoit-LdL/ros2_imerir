@@ -3,8 +3,8 @@
 <package format="3">
   <name>imerir_nav</name>
   <version>0.0.0</version>
-  <description>Navigation between multiple positions</description>
-  <maintainer email="benoitlagasse@hotmail.com">ldl-ecole</maintainer>
+  <description>TODO: Package description</description>
+  <maintainer email="corentin.choisel@imerir.com">corentin</maintainer>
   <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
