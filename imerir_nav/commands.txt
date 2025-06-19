@@ -1,0 +1,11 @@
+--> LAUNCH FILE
+
+
+--> LAUNCH GAZEBO:
+ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py y_pose:=1.0
+
+--> LAUNCH RVIZ:
+ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=$HOME/ros_workshop_ws/src/map/map_gazebo.yaml use_sim_time:=True
+
+--> LAUNCH CUSTOM NODE:
+ros2 run imerir_nav script_nav
