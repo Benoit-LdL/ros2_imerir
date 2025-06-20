@@ -43,6 +43,7 @@ int main(int argc, char * argv[])
     return msg;
   };
 
+  // vector containing the position and orientation data of each goal position
   std::vector<std::array<float, 7>> mov_pos = {
     {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000},     // origin
     {0.244, -0.000, 0.031, 0.000, 0.356, -0.000, 0.935},    // first pos
@@ -51,7 +52,10 @@ int main(int argc, char * argv[])
     {0.162, 0.000, 0.185, -0.000, 0.000, 0.000, 1.000}      // origin
   };
 
-  
+  // -------------------
+  // -- START OF CODE --
+  // -------------------
+
   // Open the gripper
   gripper_interface.setNamedTarget("open");
   if (gripper_interface.move()) {
@@ -60,6 +64,8 @@ int main(int argc, char * argv[])
     RCLCPP_ERROR(logger, "Failed to open the gripper");
   }
   
+  
+
   for(int i = 0; i < static_cast<int>(mov_pos.size()); ++i) {
     // Set the target pose for the arm
     move_group_interface.setPoseTarget(target_pose(mov_pos[i]));
