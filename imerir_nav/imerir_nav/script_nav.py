@@ -81,8 +81,8 @@ class GoToNode(Node):
 
 
 
-positionsToGo = [[-4.22, -0.87, 0.00],      # pos 1
-                 [-4.22, 3.0, 0.0],         # pos 2
+positionsToGo = [[-4.22, -0.87, -1.2],     # pos 1
+                 [-4.22, 3.0, 1.2],        # pos 2
                  [-0.60, 2.4, 0.0],         # pos 3
                  [6.87, 2.4, 0.0],          # pos 4
                  [8.72, -0.5, 0.0],         # pos 5    
@@ -96,7 +96,7 @@ def main():
     # position robot on map origin
     initial_pose = [0.00, 1.45, 0.00]  # x, y, yaw
     node.set_initial_pose(initial_pose)
-    time.sleep(10)  # Let AMCL process the initial pose
+    time.sleep(8)  # Let AMCL process the initial pose
 
     for i in range(len(positionsToGo)) :
         node.get_logger().info(f'POS {i} --> {positionsToGo[i]}')
